@@ -1,4 +1,8 @@
-# Aliases for your ~/.gitconfig
+Customising your .gitconfig
+===========================
+
+Useful Aliases
+--------------
 
 This is a collection of aliases that have so far proven useful to at least one person. If there are 
 additions to add, the rules are, alphabetical, include an explanation and the command to execute.
