@@ -1,4 +1,5 @@
-# gitconfig
+gitconfig
+=========
 
 Directly from ```man git-config```
 
@@ -9,6 +10,21 @@ default configuration.
 The configuration variables are used by both the git plumbing and the porcelains. The variables are divided into sections, wherein the fully qualified variable name of the variable
 itself is the last dot-separated segment and the section name is everything before the last dot. The variable names are case-insensitive and only alphanumeric characters are allowed.
 Some variables may appear multiple times.
+
+
+## Proxy server configuration
+
+You may need to set up a stanza to traverse a proxy server
+
+
+```bash
+[http]
+        proxy = http://[PROXY_ADDRESS]:8080
+[https]
+        proxy = https://[PROXY_ADDRESS]:8080
+```
+
+A [Google search](http://lmgtfy.com/?q=git+through+proxy) can provide additional information.
 
 ## colours
 Tuning the colours that the console displays during various `git` commands can really add to the experience making the human parsing of text displayed easier. The following text can be added to your `~/.gitconfig`.
