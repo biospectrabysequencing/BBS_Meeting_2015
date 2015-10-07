@@ -1,51 +1,53 @@
-# BBS Project Meeting Prior to MapNet 2015
+BBS Project Meeting Prior to MapNet 2015
+========================================
+
 ## BBS Technical Meeting 
 
-9 – 9:30
+9:00 - 9:30
 
 * Project background, the past year and where do we want to go?
 * What do you want out of the project?
 
-9:30 – 10
+9:30 - 10:00
 
 * Priority list discussion.
 
-10 – 10:15
+10:00 - 10:15
 
 * What do you want to add / code / contribute to the project?
 
-10:15 – 10:30
+10:15 - 10:30
 
 * Groups & sub groups based on topic (e.g. QC Group, MOA Group, etc).
 * Problems characterized and approaches?
 * Steering committee.
 
-10:30 – Noon
+10:30 - 12:00
 
 * Off Email and into the cloud
 * Using Git / Github & Best practices discussion
 * Github Sign up & Hands on work
 
-Noon to 1 Lunch provided by NZGL
+12:00 - 1:00 Lunch provided by NZGL
 
 ## BBS Expanded Meeting
 
-1 – 1:10
+12:00 - 1:10
 
 * Project Review
 
-1:10 – 1:30
+1:10 - 1:30
 
 * What does the community expect from the BBS group?
 
-1:30 – 1:45
+1:30 - 1:45
 
 * What are their needs?
 
-1:45 – 2
+1:45 - 2:00
 
 * How would they like to contribute?
 
-2
+2:00: 23:00
 
 * Final remarks
