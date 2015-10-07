@@ -19,12 +19,13 @@ You may need to set up a stanza to traverse a proxy server
 
 ```bash
 [http]
-        proxy = http://[PROXY_ADDRESS]:8080
+        proxy = http://[PROXY_ADDRESS]:[PROXY_PORT]
 [https]
-        proxy = https://[PROXY_ADDRESS]:8080
+        proxy = https://[PROXY_ADDRESS]:[PROXY_PORT]
 ```
 
 A [Google search](http://lmgtfy.com/?q=git+through+proxy) can provide additional information.
+
 
 ## colours
 Tuning the colours that the console displays during various `git` commands can really add to the experience making the human parsing of text displayed easier. The following text can be added to your `~/.gitconfig`.
