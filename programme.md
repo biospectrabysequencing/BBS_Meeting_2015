@@ -7,10 +7,12 @@
 *What do you want out of the project?
 
 9:30 – 10
-Priority list discussion.
+
+* Priority list discussion.
 
 10 – 10:15
-What do you want to add / code / contribute to the project?
+
+* What do you want to add / code / contribute to the project?
 
 10:15 – 10:30
 
@@ -30,15 +32,15 @@ Noon to 1 Lunch provided by NZGL
 
 1 – 1:10
 
-Project Review
+* Project Review
 
 1:10 – 1:30
 
-What does the community expect from the BBS group?
+* What does the community expect from the BBS group?
 
 1:30 – 1:45
 
-What are their needs?
+* What are their needs?
 
 1:45 – 2
 
