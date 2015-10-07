@@ -48,6 +48,6 @@ BBS Project Meeting Prior to MapNet 2015
 
 * How would they like to contribute?
 
-2:00: 23:00
+2:00 - 2:30
 
 * Final remarks
