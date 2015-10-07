@@ -25,5 +25,19 @@ We can leverage training material in the public domain
 
 ## github setup
 
-You .gitconfig file needs to be configured for your user account and traverse company firewalls 
+Your [.gitconfig](gitconfig.md) file needs to be configured for your user account and traverse company firewalls 
 
+## Setting up aliases
+ 
+See [useful aliases](userful_aliases.md) to save on typing
+
+
+## Syncing repositories
+
+forks and clones of repositories can get out of sync, how can we tell easily?
+[Shasums](https://en.wikipedia.org/wiki/Sha1sum) are used as a [globally unique identifier](https://en.wikipedia.org/wiki/Globally_unique_identifier)
+for each commit which contains changs to one or more files.
+
+We can use the [network graph](https://github.com/biospectrabysequencing/BBS_Meeting_2015/network) to see commits in a repository. It illustrates
+the mast branch (in black) of the [upstream]() repository, and the position of any forks of the upstream repostiory  and branches that contributors are working on.
+ 
