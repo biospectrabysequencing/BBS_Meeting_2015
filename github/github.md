@@ -15,6 +15,7 @@ for the following reasons;
 [![online](http://img.youtube.com/vi/U8GBXvdmHT4/0.jpg)](https://www.youtube.com/watch?v=U8GBXvdmHT4&t=47m00s))
 
 
+
 ## Training material
 
 We can leverage training material in the public domain
@@ -23,7 +24,7 @@ We can leverage training material in the public domain
 * [github help](https://help.github.com)
 * [Software caprentry](https://software-carpentry.org)
  + [git novice](https://github.com/swcarpentry/git-novice)
-
+* [Advanced git (youtube)](https://www.youtube.com/watch?v=ig5E8CcdM9g)
 
 ## github setup
 
