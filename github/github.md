@@ -12,6 +12,8 @@ for the following reasons;
 * Leverage open source bioinformatics community e.g. github projects [samtools](https://github.com/samtools/samtools), [bcftools](https://github.com/samtools/bcftools), [vcftools](https://github.com/vcftools/vcftools), [freebayes](https://github.com/ekg/freebayes) etc...
 * [5x increase in contributions](https://www.youtube.com/watch?v=U8GBXvdmHT4&t=47m00s)
 
+[![online](http://img.youtube.com/vi/U8GBXvdmHT4/0.jpg)](https://www.youtube.com/watch?v=U8GBXvdmHT4&t=47m00s))
+
 
 ## Training material
 
@@ -20,7 +22,7 @@ We can leverage training material in the public domain
 * [Atlassian github tutorials](https://www.atlassian.com/git/tutorials)
 * [github help](https://help.github.com)
 * [Software caprentry](https://software-carpentry.org)
-** [git novice](https://github.com/swcarpentry/git-novice)
+ + [git novice](https://github.com/swcarpentry/git-novice)
 
 
 ## github setup
@@ -40,4 +42,3 @@ for each commit which contains changs to one or more files.
 
 We can use the [network graph](https://github.com/biospectrabysequencing/BBS_Meeting_2015/network) to see commits in a repository. It illustrates
 the mast branch (in black) of the [upstream]() repository, and the position of any forks of the upstream repostiory  and branches that contributors are working on.
- 
