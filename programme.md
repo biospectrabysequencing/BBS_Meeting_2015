@@ -44,8 +44,8 @@ Noon to 1 Lunch provided by NZGL
 
 1:45 – 2
 
-How would they like to contribute?
+* How would they like to contribute?
 
 2
 
-Final remarks
+* Final remarks
