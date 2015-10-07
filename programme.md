@@ -4,7 +4,7 @@
 9 – 9:30
 
 * Project background, the past year and where do we want to go?
-*What do you want out of the project?
+* What do you want out of the project?
 
 9:30 – 10
 
