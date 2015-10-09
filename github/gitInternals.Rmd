@@ -1,0 +1,292 @@
+---
+title: "Git internals"
+date: "8/10/2015"
+output: html_document
+---
+
+```{r setup, echo=FALSE, results="hide", engine="bash"}
+mkdir -p /tmp/$USER
+
+## Clean slate
+rm -rf /tmp/$USER/project1 /tmp/$USER/project1damaged
+
+cd /tmp/$USER
+## https://github.com/matthewmccullough/scripts/blob/master/generaterandomchanges
+cat - > generaterandomchanges << 'EOF'
+#!/bin/bash
+
+#Ensure we have the quantity specified on the CLI
+if [ -z "$3" ]; then ARG_ERR=ERR; fi
+if [ -z "$2" ]; then ARG_ERR=ERR; fi
+if [ -z "$1" ]; then ARG_ERR=ERR; fi
+if [ -n "$ARG_ERR" ];
+then
+    echo "Usage: <filecount> <filenamebase> <filenameextension>"
+    exit
+fi
+
+count=$1
+filenamebase=$2
+filenameextension=$3
+for (( filenumber = 1; filenumber <= $count ; filenumber++ )); do
+    echo "Some new random text: $RANDOM" >> $filenamebase$filenumber.$filenameextension
+    git add $filenamebase$filenumber.$filenameextension
+    git commit -m"A random change of $RANDOM to $filenamebase$filenumber.$filenameextension"
+done
+EOF
+
+chmod 755 generaterandomchanges
+```
+
+
+This document is an advanced topic on understanding the git internals, it captures commands used in the following youtube video to illustrate git internals.
+
+
+[![online](http://img.youtube.com/vi/ig5E8CcdM9g/0.jpg)](https://www.youtube.com/watch?v=ig5E8CcdM9g))
+
+
+First, we need to make an empty git repository, in this case under the environment variable `/tmp/$USER` where USER=hramwd;
+
+
+```{r init, engine="bash"}
+cd /tmp/$USER
+## Initialize a git repository
+git init project1
+
+cd /tmp/$USER/project1
+ls -la
+```
+
+
+Now visualize the tree - It is empty
+
+
+```{r emptyTree, engine="bash"}
+## knitr is dumb, we must traverse to the directory in every code chunk
+cd /tmp/$USER/project1
+tree .git
+```
+
+
+Now create a new file and add it to the git repository, this is called [staging the changes](http://githowto.com/staging_changes). To stage the file means that git knows about the change, but it is not permanent in the repository. The next commit will include the changes staged. We are interested in the `.git/objects` part of the tree;
+
+[Youtube - 6m47s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=6m47s)
+
+```{r addTree, engine="bash"}
+cd /tmp/$USER/project1
+echo "Hello World" > hello.txt
+git add hello.txt
+tree .git/objects
+```
+
+Each commit has an individual (unique) fingerprint, its [shasum](https://en.wikipedia.org/wiki/Sha1sum) which is a 40 character globally unique identifier for the file. In git the file we have just staged is stored in the `objects` sub-directory where the first two characters of the shasum specify the directory, and the remaining 38 characters are a Zlib compressed file containing the contents of `hello.txt`.
+
+Now committing the file to git, new additions are made to the `.git/objects` part of the tree
+
+[Youtube - 8m15s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=8m15s)
+
+```{r commitTree, engine="bash"}
+cd /tmp/$USER/project1
+git commit -m"First hello"
+tree .git/objects
+```
+
+After committing we now have three shasums, one for the file, one for the directory, and one for the commit details. The third commit will always be unique to the committer, their git USERNAME by time stamp of when the commit was made, and the commit message.
+
+Reproducing the hash digest
+
+```{r shasum, engine="bash"}
+printf "blob 12\000Hello World\n" | shasum
+```
+
+
+Illustration of git low level plumbing to create a shasum from an echo statement
+
+[Youtube - 10m23s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=10m23s)
+
+```{r shasumGit, engine="bash"}
+echo "Hello World" | git hash-object --stdin
+```
+
+
+The object is compressed
+
+```bash
+$ cat .git/objects/55/7db03de997c86a4a028e1ebd3a1ceb225be238
+xKÊÉOR04bðHÍÉÉÏ/ÊIáAÑI
+```
+
+Perl deflate one liner prerequisite
+
+[Youtube - 14m40s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=14m40s)
+
+```bash
+## May need to install the perl module...
+cpanm Compress:Zlib
+
+```
+
+We can decompress any of these shasum objects
+
+```bash
+## Make  a perl alias to decompress
+alias deflate="perl -MCompress::Zlib -e 'BEGIN{undef $/} print uncompress(<>)'"
+
+cd /tmp/$USER/project1
+
+deflate .git/objects/55/7db03de997c86a4a028e1ebd3a1ceb225be238
+```
+
+```{r echo=FALSE}
+cat("blob 12Hello World")
+```
+
+
+Illustrates the object contains the components `what is it`, with the `byte count` and the `contents` of the file, and the file name is the shasum `unique fingerprint` 
+
+The commit information is also a shasum stored object, as an exercise decompress the object detailing the commit.
+
+```bash
+deflate .git/objects/b4/e1378e8559dde7e2bcebb214a0511bc4453210
+```
+
+
+[Youtube - 15m30s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=15m30s)
+
+
+```bash
+git update-index --add --cacheinfo 100644 557db03de997c86a4a028e1ebd3a1ceb225be238 hello.txt
+```
+
+Using git internals `cat-file` identify commit types, and to deconvolute contents of commits
+
+[Youtube - 90m30s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=15m30s)
+
+```{r cat-file, engine="bash"}
+cd /tmp/$USER/project1
+git log -1 | sed -e 's/Author.*/Author: [USER]/gi'
+
+## Capture commit shasum
+logShasum=$(git log | head -n1 | cut -d" " -f2 | cut -b1-8)
+
+## Look at the log commit contents
+echo -e "\n[ $logShasum commit contents ]"
+git cat-file -t $logShasum
+
+git cat-file -p $logShasum | sed -e 's/author.*/author: [USER]/g' | sed -e 's/committer.*/committer [EMAIL_ADDRESS]/g'
+
+## Look at the file commit contents
+commitShasum=$(git cat-file -p $logShasum | grep tree | cut -d" " -f2 | cut -b1-8)
+echo -e "\n[ $commitShasum commit contents ]"
+git cat-file -t $commitShasum
+
+git cat-file -p $commitShasum
+```
+
+The contents contain the mode, `100` (standard file), `644` permissions, `blob` a file, shasum identifier, and file name identifier.
+
+Why is this useful?
+-------------------
+
+Making a damaged repository to illustrate integrity checking
+
+[Youtube - 21m50s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=21m50s)
+
+```{r damagedRepo, engine="bash"}
+## Make sure directory doesnt exist for copy
+if [ -d /tmp/$USER/project1damaged ]; then
+  rm -rf /tmp/$USER/project1damaged
+fi
+  
+cp -r /tmp/$USER/project1 /tmp/$USER/project1damaged
+cd /tmp/$USER/project1damaged
+
+## Capture commit shasum
+ s2=$(git log | head -n1 | cut -d" " -f2 | cut -b1-2)
+s38=$(git log | head -n1 | cut -d" " -f2 | cut -b3-40)
+
+#tree .git/objects
+#echo "[ $s2 $s38 ]""
+
+chmod 700 .git/objects/$s2/$s38
+echo 1 >> .git/objects/$s2/$s38
+```
+
+
+Now the integrity of the repository is corrupted, and git detects it.
+
+```bash
+## Integrity compromized
+git status 
+```
+
+```{r echo=FALSE}
+cat("error: garbage at end of loose object '2d18f6dadedc18ed53cea9318199f9019a68630f'
+fatal: object 2d18f6dadedc18ed53cea9318199f9019a68630f is corrupted")
+```
+
+```{r fixRepo, engine="bash"}
+git fsck --full --strict
+```
+
+Every commit over time in the repository can be integrity checked for malicious bit rot.
+
+
+Merging branches. Generating some random changes to merge feature into master.
+
+[Youtube - 27m00s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=27m00s)
+
+```{r randomChanges, engine="bash"}
+cd /tmp/$USER/project1
+cp ../generaterandomchanges .
+git branch feature1
+
+./generaterandomchanges 2 master txt
+git checkout feature1
+./generaterandomchanges 2 feature txt
+
+git alog
+git merge-base master feature1
+
+git checkout master
+git merge feature1
+
+# git merge-base feature1 feature2 feature3
+```
+
+
+Short hand shasum hashes. All git commands use `git rev-parse` to resolve all unique short hand hashes
+into 40 character shasums.
+
+[Youtube - 30m45s](https://www.youtube.com/watch?v=ig5E8CcdM9g&t=30m45s)
+
+```{r rev-parse, engine="bash"}
+cd /tmp/$USER/project1
+
+logShasum=$(git log | head -n1 | cut -d" " -f2 | cut -b1-8)
+
+## Look at the log commit contents
+echo -e "\n[ $logShasum commit contents ]"
+
+git rev-parse $logShasum
+```
+
+
+```{r tags, engine="bash"}
+cd /tmp/$USER/project1
+
+git gc
+tree .git/objects
+## No change
+git tag NORMALTAG
+tree .git/objects
+
+git tag -a SAMPLEWITHANNOTATED -m'This is a tag to show to my SFO JUG friends'
+tree .git/objects
+
+tagCommit=$(git rev-parse SAMPLEWITHANNOTATED | cut -b1-8)
+echo "[ git cat-file is of type Tag ]"
+git cat-file -t $tagCommit
+git cat-file -p $tagCommit
+```
+
