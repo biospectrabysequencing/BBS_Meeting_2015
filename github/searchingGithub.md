@@ -6,12 +6,14 @@ An important task is searching for code by `filename`, or underlying `text` with
 across multiple repositories, for example all code which contains the text `samtools sort` for all 
 repositories. In the github saerch box type
 
-* [user:biospectrabysequencing samtools](https://github.com/search?utf8=%E2%9C%93&q=user%3Abiospectrabysequencing+samtools&type=Code&ref=searchresults)
+* [user:biospectrabysequencing tassel](https://github.com/search?utf8=%E2%9C%93&q=user%3Abiospectrabysequencing+tassel&type=Code&ref=searchresults)
 
+We can then identify what code type we are interested in and subset accordingly. Say we are only interest in `shell` code, then we can click on the Language type link
+filter for only that type of code
 
-We can then identify what code type we are interested in and subset accordingly.
+* [user:biospectrabysequencing langauge:Shell tassel](https://github.com/search?l=bash&q=user%3Abiospectrabysequencing+tassel&ref=searchresults&type=Code&utf8=%E2%9C%93)
 
-See [Advanced search GUI](https://github.com/search/advanced) for constructing search criteria.
+See [Advanced search GUI](https://github.com/search/advanced) for constructing more complicated search criteria.
 
 
 ## Considerations for code search
