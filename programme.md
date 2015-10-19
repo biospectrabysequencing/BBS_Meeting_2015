@@ -1,6 +1,8 @@
 BBS Project Meeting Prior to MapNet 2015
 ========================================
 
+## October 28th Rotorua & Networked
+
 ## BBS Technical Meeting 
 
 9:00 - 9:30
