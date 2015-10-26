@@ -34,22 +34,19 @@ BBS Project Meeting Prior to MapNet 2015
 
 ## BBS Expanded Meeting
 
-12:00 - 1:10
+1:00 - 1:30
 
-* Project Review
+* Project Review and Mechanisms for Collaboration.
 
-1:10 - 1:30
+1:30 - 1:50
 
 * What does the community expect from the BBS group?
-
-1:30 - 1:45
-
 * What are their needs?
 
-1:45 - 2:00
+1:50 - 2:10
 
 * How would they like to contribute?
 
-2:00 - 2:30
+2:10 - 2:15
 
 * Final remarks
