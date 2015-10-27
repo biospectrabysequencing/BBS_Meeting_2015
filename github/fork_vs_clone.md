@@ -41,8 +41,12 @@ The contibution model is;
 
 We can see how a branch is developed and merged into `master` via the `network graph` (in github `Graphs => Network`).
 
+The branch f/cleanup is 5 commits ahead of `master`. Hovering over specific nodes (commits) identifies the commit shasum.	
+
 ![Branch example](images/BBS_network.jpg)
 
+After completing a pull request the 5 commits are merged into `master`, and an additional commit is made for the pull requeset.
+ 
 ![Merged branch example](images/networkExampleMerged.jpg)
 
 
