@@ -1,12 +1,54 @@
 Fork and Clone
 ==============
 
+A fork is a standalone copy (clone) of a repository that resides on github, so 
+it is effectively just a clone that you own in the cloud. a clone is just a copy 
+of a repository. 
+
 * Fork - make a clone of a repository server side to a copy you own.
 * Clone - make a copy of a repository client side
 
 N.B. in order to significantly contribute to a project it is likely a clone will
 be required,  whether it  is of  the source repository,  or a  fork of  a source
 repository.
+
+Over time the content in forks and clones will contain new contributions that 
+are missing from the master `uptream` repository or from your fork of the master 
+`upstream` repository which by definition call `origin`.
+
+In this case we must `fetch` (download) and `merge` (join) remote branches, both 
+commands can be run in a single `pull` command to fetch from and 
+integrate new contributions.
+
+* [git fetch documentation](https://git-scm.com/docs/git-fetch)
+* [git merge documentation](https://git-scm.com/docs/git-merge)
+* [git pull documentation](https://git-scm.com/docs/git-pull)
+
+See the [git glossary](https://help.github.com/articles/github-glossary/) for 
+definitions.
+
+Branching
+---------
+
+The contibution model is;
+
+* fork (copy) a github repository
+* clone your copy to another machine
+* Make a branch from `master` (git co -tb f/branch)
+* Make contributions
+* Push contributions to `origin` (git push origin f/branch)
+* Make a pull request on github
+
+We can see how a branch is developed and merged into `master` via the `network graph` (in github `Graphs => Network`).
+
+The branch f/cleanup is 5 commits ahead of `master`. Hovering over specific nodes (commits) identifies the commit shasum.	
+
+![Branch example](images/BBS_network.jpg)
+
+After completing a pull request the 5 commits are merged into `master`, and an additional commit is made for the pull requeset.
+ 
+![Merged branch example](images/networkExampleMerged.jpg)
+
 
 # Permissions
 
