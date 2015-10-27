@@ -95,31 +95,31 @@ Setting up best practice and technology transfer.
 * genome assembly
 * understand science and plant breeding programmes and applications
 
-** Helge **
+**Helge**
 
 * automation to make us competitive
 * best practice
 * Kea and integration for samp
 
-** Ruy **
+**Ruy**
 
 * new comer
 * steps through pipeline
 * QC
 * multivariate stats approaches and effects
 
-** Lucy **
+**Rachel**
 
 * pipeline runner
 * accuracy - are they working as expected
 
-** Aurelie **
+**Aurelie**
 
 * Bacteria - new area
 * learning new things
 * using Github for reproducible science
 
-** Cecilia **
+**Cecilia**
 
 * standardisation
 * lab practice and effects of results
@@ -145,3 +145,27 @@ Setting up best practice and technology transfer.
 ### A modular approach
 
 Samples are different...
+
+### TASSEL
+
+* hackathon
+* uniq pipeline is deprecated
+
+### Stacks
+
+* slow compared to
+* small overlap
+
+## Variant calling
+
+* small overlap between tools
+* TASSEL workflow discussion - compressing reads -> tags -> reads per sample to genotyping
+* sequencing depth per sample?
+* not in scope
+* discussion
+* GBS X?
+
+### Boxes...
+
+Rob drawing boxes on the whiteboard (image to follow)
+* purple to match Phil's shirt ;)
