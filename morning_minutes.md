@@ -169,3 +169,28 @@ Samples are different...
 
 Rob drawing boxes on the whiteboard (image to follow)
 * purple to match Phil's shirt ;)
+* areas to work on
+* capturing what is important
+
+#### Areas
+
+1. QC
+  - demultiplexing
+2. SNP calling
+3. Testing
+4. Analysis
+
+Across board is *automation*, *reproducibility*, *best practice* and *documentation*.
+
+LIMS - > raw data -> VCF - > 'real' results
+
+* rabbit hole discussion about demultiplexing and snp calling.
+
+* 1 - 3 have common ground as do the across the board - these are the **core**
+
+**Analysis**
+
+Phil asked direction of TASSEL 5 dev.
+
+* TASSEL 5 use case is land races - out breeding
+* Are they amendable to community derived code? - yes - a reason for BBS approach.
