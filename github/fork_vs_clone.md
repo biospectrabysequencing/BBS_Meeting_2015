@@ -27,6 +27,24 @@ integrate new contributions.
 See the [git glossary](https://help.github.com/articles/github-glossary/) for 
 definitions.
 
+Branching
+---------
+
+The contibution model is;
+
+* fork (copy) a github repository
+* clone your copy to another machine
+* Make a branch from `master` (git co -tb f/branch)
+* Make contributions
+* Push contributions to `origin` (git push origin f/branch)
+* Make a pull request on github
+
+We can see how a branch is developed and merged into `master` via the `network graph` (in github `Graphs => Network`).
+
+![Branch example](images/BBS_network.jpg)
+
+![Merged branch example](images/networkExampleMerged.jpg)
+
 
 # Permissions
 
