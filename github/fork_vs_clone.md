@@ -13,11 +13,11 @@ be required,  whether it  is of  the source repository,  or a  fork of  a source
 repository.
 
 Over time the content in forks and clones will contain new contributions that 
-are missing from the master `uptream` repository oryour fork of the master 
-`upstream` repositorywhich by definition call `origin`.
+are missing from the master `uptream` repository or from your fork of the master 
+`upstream` repository which by definition call `origin`.
 
-In this case we must `fetch` (download) and `merge` (join) remote branches, or 
-combining both commands we can run a single `pull` command to fetch from and 
+In this case we must `fetch` (download) and `merge` (join) remote branches, both 
+commands can be run in a single `pull` command to fetch from and 
 integrate new contributions.
 
 * [git fetch documentation](https://git-scm.com/docs/git-fetch)
