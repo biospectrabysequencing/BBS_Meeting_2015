@@ -1,0 +1,147 @@
+## BBS Meeting
+
+**present**
+
+Introduction by Rob Elshire
+
+* Future problems solvers - introduce ideas without prejudice
+  - egalitarian meeting
+* Setup a space on [GitHub](https://github.com) and [Gitter](https://gitter.im)
+
+MBIE project is missing a bit that is the toolkit to capture the audit trail to record what is done.
+
+Sorting this out... today is a technical discussion
+
+### MapNet 2014
+
+Last year we spent time discussing this at MapNet 2014.
+
+* Getting on GitHub was a barrier - action this **before** 11am
+* Some time out/moved from AgResearch
+* GitHub space needs organisation
+
+#### What we have
+* scripts from Cornell
+* documentation from Mingsu
+
+#### What we need
+* pre TASSEL QC
+  - Mingsu has done some work
+  - Patrick Biggs (not present) has generated some
+  - Justin Borwitz @ANU also done some
+* Need to integrate this work
+
+## What do we want to get out of this?
+
+* What itches need scratching
+* personal interests
+* job overlap
+
+Setting up best practice and technology transfer.
+
+**Rob**
+
+* automatability
+* reproducibility
+* getting it out there and available
+* CRI and NZGL platform
+
+**Rudiger**
+
+* work within the MBIE project
+* end to end trace
+
+**Shane**
+
+* problem solver and programmer
+
+
+**Tony**
+
+* BioIT provision
+* provide and environmnet that is useful
+* organisation
+* project management
+
+**Naumann**
+
+* What can Bioinformatics@AgResearch do as a team
+* Team leader
+
+**Marcus**
+
+* what is going on? - save effort
+* reproducible research
+* unit testing and tool evalutation
+* best practice
+
+**Mingshu**
+
+* wish unified platform for researchers and analysts
+* small country - maximise leverage
+* discoverability
+
+**Milan**
+
+* feed data and have a publication
+
+****
+
+* User and exploit
+
+**Roger**
+
+* data platform
+* genome assembly
+* understand science and plant breeding programmes and applications
+
+** Helge **
+
+* automation to make us competitive
+* best practice
+* Kea and integration for samp
+
+** Ruy **
+
+* new comer
+* steps through pipeline
+* QC
+* multivariate stats approaches and effects
+
+** Lucy **
+
+* pipeline runner
+* accuracy - are they working as expected
+
+** Aurelie **
+
+* Bacteria - new area
+* learning new things
+* using Github for reproducible science
+
+** Cecilia **
+
+* standardisation
+* lab practice and effects of results
+* best practice wet and dry labs
+
+** Phil **
+
+* delinearise
+* VISG 2 informed decisions for project plan
+* modularisation of a pipeline
+* exome capture using same/similar tools
+* assay tools for end user needs
+* validation component
+  - best practice
+  - biologists require a level of confidence form output
+
+** Rob **
+
+* linkages and feedback with down stream analysis
+* down stream and upstream communications
+* solve the blindsiding
+
+### A modular approach
+
+Samples are different...
