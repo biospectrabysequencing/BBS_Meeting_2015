@@ -167,10 +167,12 @@ Samples are different...
 
 ### Boxes...
 
-Rob drawing boxes on the whiteboard (image to follow)
+Rob drawing boxes on the whiteboard
 * purple to match Phil's shirt ;)
 * areas to work on
 * capturing what is important
+
+[!whiteboard](img/boxes.jpg)
 
 #### Areas
 
