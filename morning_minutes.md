@@ -188,9 +188,20 @@ LIMS - > raw data -> VCF - > 'real' results
 
 * 1 - 3 have common ground as do the across the board - these are the **core**
 
+* documentation - need for wet and dry versions
+* moa == automation and reproducibility
+
 **Analysis**
 
 Phil asked direction of TASSEL 5 dev.
 
 * TASSEL 5 use case is land races - out breeding
 * Are they amendable to community derived code? - yes - a reason for BBS approach.
+
+## creating sub projects
+
+To enable some distributed workflows within git.
+
+## per species best practices
+
+We are dealing with biology, different organisms have different volumes of resources, and hence best practice.
