@@ -202,8 +202,21 @@ Phil asked direction of TASSEL 5 dev.
 
 To enable some distributed workflows within git.
 
-
-
 ## per species best practices
 
 We are dealing with biology, different organisms have different volumes of resources, and hence best practice.
+
+
+## Steering committee
+
+We could do with one.
+
+What should they do.
+
+**Steering** not *oversight*
+
+* IP
+* Contributor agreement
+* Resourcing
+
+Naumann and Helge are CRI go-to people.
