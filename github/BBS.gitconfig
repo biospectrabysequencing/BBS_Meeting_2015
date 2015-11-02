@@ -1,0 +1,70 @@
+[user]
+	email = <github-username>@users.noreply.github.com
+	name = <Real Name>
+
+[credential "https://github.com"]
+        username = <github-username>
+
+[http]
+        proxy = http://[PROXY_ADDRESS]:[PROXY_PORT]
+[https]
+        proxy = https://[PROXY_ADDRESS]:[PROXY_PORT]
+
+[color]
+        ui = true
+
+[color "branch"]
+        current = yellow reverse
+        local   = yellow
+        remote  = green
+
+[color "diff"]
+    meta       = yellow bold
+    frag       = magenta bold
+    old        = red bold
+    new        = green bold
+    whitespace = red reverse
+#   ^
+# Highlight whitespace in diffs
+
+[color "status"]
+    added     = yellow
+    changed   = green
+    untracked = cyan
+
+[core]
+    excludesfile = ~/.gitexcludes
+	editor   = 'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
+    whitespace   = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
+[cvsimport]
+    r = cvs
+    v = false
+    track-revisions = true
+# http://www.gromacs.org/Developer_Zone/Git/Migrating_a_CVS_repository_to_GIT
+
+[alias]
+# simples
+    co = checkout
+    ci = commit -s
+    br = branch
+    rb = rebase
+    st = status
+    df = diff
+    lg = log -p
+    who = shortlog -s --
+    lsm = ls-files -m
+
+# logging
+    alog = log --graph --oneline --decorate
+    plog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+# other diffs
+    changes = diff --name-status -r
+    dstat   = diff --stat -r
+
+# svn
+    moff  = merge --no-ff
+    svndc = svn dcommit -n
+    svnc  = svn dcommit -e
+    svnrb = svn rebase
