@@ -1,6 +1,7 @@
 # Using [GitHub](http://www.github.com)
 
 * [Cheat Sheet](http://git.io/sheet)
+* [Git online book](http://git-scm.com/book/en/v2)
 
 ## Terms
 
