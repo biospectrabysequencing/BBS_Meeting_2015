@@ -10,3 +10,5 @@ Please fill in as appropriate.
 * Ruy: Fastq based read quality trim. Effect of trimming/read dropping on tag count per sample. UNEAK. Standard downstream analysis (after vcf table) to check sanity.
 
 * Marcus Davy Bash/Perl/R. Quality control, Random Tag GBS, simulation validation, vcf calling workflows freebayes/samtools, Reproducible research
+
+* Mauro Truglio: Python, R. Quality control, GBS adapters balancing, coding in general. 
