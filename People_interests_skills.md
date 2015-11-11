@@ -12,3 +12,5 @@ Please fill in as appropriate.
 * Marcus Davy Bash/Perl/R. Quality control, Random Tag GBS, simulation validation, vcf calling workflows freebayes/samtools, Reproducible research
 
 * Mauro Truglio: Python, R. Quality control, GBS adapters balancing, coding in general. 
+
+* Rob Elshire; Bash / AWK / general unixy stuff, GBS best practices, automation, reproducible research, TASSEL
