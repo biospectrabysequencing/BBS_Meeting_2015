@@ -24,3 +24,12 @@ Please fill in as appropriate.
 * Rudi:
   - *interests:* communication and feedback loops between lab staff, bioinformatician, statistician and IT staff; data visualization
   - *skills:*    Python, bash, awk, SNP chip design
+
+* Kevin Murray:
+  - *interests*: Comprehensive QC of reads and samples, simulation & validation
+    tools, NextRAD, moving to reproducible pipelines, moving to using stacks
+    for *de novo* GBS.
+  - *skills*: C/C++, Python, R, workflow & pipeline management, sysadmin. Have
+    implemented full Fastq read quality control pipeline for GBS.
+  - *requirements*: Scalable and reproducible analysis pipelines, accurate and
+    trustworthy *de novo* GBS analysis.
