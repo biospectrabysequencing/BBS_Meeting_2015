@@ -20,3 +20,7 @@ Please fill in as appropriate.
 * Patrick Biggs:
     interests:  data QC, data visualisation, comparative genomics
     skills:     Perl, MySQL, (want to have better R skills)
+
+* Rudi:
+  - *interests:* communication and feedback loops between lab staff, bioinformatician, statistician and IT staff; data visualization
+  - *skills:*    Python, bash, awk, SNP chip design
