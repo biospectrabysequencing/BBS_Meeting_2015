@@ -33,3 +33,8 @@ Please fill in as appropriate.
     implemented full Fastq read quality control pipeline for GBS.
   - *requirements*: Scalable and reproducible analysis pipelines, accurate and
     trustworthy *de novo* GBS analysis.
+
+* Mingshu Cao:
+ - *interests:* apply GBS to understand complex genetic structures in plants
+ - *skills:*   to understand data using an array of computational and statistical tools; trained as a plant geneticist and computer science practitioner; A veteran R user and an enthusiatic Julia user
+
