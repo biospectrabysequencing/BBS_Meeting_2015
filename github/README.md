@@ -56,8 +56,10 @@ Help on GitHub is categorised. Alphabetically the main categories are:
 * [All Guides](https://guides.github.com/)
 * [Issues](https://guides.github.com/features/issues/)
 * [Hadley Wickhams github notes](http://r-pkgs.had.co.nz)
-* [github: The Gentle Art of Patch Review](http://sarah.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/)
 * [Karl Bromans github guide](http://kbroman.org/github_tutorial/)
+* [github: The Gentle Art of Patch Review](http://sarah.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/)
+* [Changing History, or How to Git pretty](https://presentate.com/bobthecow/talks/changing-history#slide-6)
+
 ## GitHub@Youtube
 
 * [![basics and overview](http://img.youtube.com/vi/U8GBXvdmHT4/0.jpg)](https://www.youtube.com/watch?v=U8GBXvdmHT4)
