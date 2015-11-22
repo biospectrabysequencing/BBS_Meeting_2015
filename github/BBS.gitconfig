@@ -57,6 +57,7 @@
 
 # logging
     alog = log --graph --oneline --decorate
+    flog = log --name-only --pretty=format:'%Cred%h%Creset - %s %C(bold blue)<%an>%Creset'
     plog = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
 # other diffs
