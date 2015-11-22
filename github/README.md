@@ -53,12 +53,17 @@ Help on GitHub is categorised. Alphabetically the main categories are:
 
 **Really** shouldn't be replicating what has already been done, and we are paying for it being done.
 
-* [All Guides](https://guides.github.com/)
-* [Issues](https://guides.github.com/features/issues/)
+* [All Guides](https://guides.github.com)
+* [Software carpentry: Version Control with Git](http://swcarpentry.github.io/git-novice)
+* [Issues](https://guides.github.com/features/issues)
 * [Hadley Wickhams github notes](http://r-pkgs.had.co.nz)
-* [Karl Bromans github guide](http://kbroman.org/github_tutorial/)
-* [github: The Gentle Art of Patch Review](http://sarah.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/)
+* [Karl Bromans github guide](http://kbroman.org/github_tutorial)
+
+### Collaborating using git and github
+* [github: The Gentle Art of Patch Review](http://sarah.thesharps.us/2014/09/01/the-gentle-art-of-patch-review)
 * [Changing History, or How to Git pretty](https://presentate.com/bobthecow/talks/changing-history#slide-6)
+
+<img src="images/git-pretty.png" width=900>
 
 ## GitHub@Youtube
 
