@@ -7,7 +7,7 @@ This is known as creating a **pull request**.
 
 This is  a simple task  to create a  pull request and  opens up your  changes to
 review  and critique.  This  takes the  form  of  a discussion  as  can be  seen
-[here](//github.com/PlantandFoodResearch/PFRdataCraft/pull/1).  This  discussion
+[here](http://github.com/biospectrabysequencing/BBS_Meeting_2015/pull/2).  This  discussion
 may  result in  a merging  of the  changes into  the source  repository or  some
 suggestions on  how to  improve the  changes so  that they  are merged.   A pull
 request can also be closed without merging.
