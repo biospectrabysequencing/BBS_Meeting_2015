@@ -38,3 +38,6 @@ Please fill in as appropriate.
  - *interests:* apply GBS to understand complex genetic structures in plants
  - *skills:*   to understand data using an array of computational and statistical tools; trained as a plant geneticist and computer science practitioner; A veteran R user and an enthusiatic Julia user
 
+* Aurelie:
+ - *interests:* reproducibility, BBS data on bacteria
+ - *skills:* awk/bash, HPC 
