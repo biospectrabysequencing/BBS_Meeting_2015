@@ -3,10 +3,10 @@ Github gists
 
 What is a gist?
 
-[Gists](http://gist.github.com) are a way to docmument and share code snippets. They are accessible from the link a tthe top middle of any github page.
+[Gists](http://gist.github.com) are a way to document and share code snippets. They are accessible from the link a the top middle of any github page.
 You can think of a gist as a cut down github repository, each gist can be public or private (https, and large shasum url) and contain one or many files of content. 
 
-By specifying the filetype of a file as *.md, automatically sets the filetype as markdown for document rendering.
+By specifying the filetype of a file as `[FILENAME].md`, automatically sets the filetype as markdown for document rendering.
  
 You can only have a master branch, however you can fork an upstream gist url that has been shared with you, clone your origin fork, make changes locally, 
 and push those changes back into your fork. Only the owner of an upstream gist repository can merge changes from a fork back into the upstream repository.
@@ -38,7 +38,7 @@ Make some changes locally, the git alog illustrates that any branching is of the
 
 
 ```bash
- git alog | head
+git alog | head -n15
 * 7dad2f6 (HEAD, origin/master, origin/HEAD, master) README, document()
 * 505483e simplify Makefile, consistency
 * 8997532 new knitr call, help added, defaults ordering etc
@@ -49,17 +49,29 @@ Make some changes locally, the git alog illustrates that any branching is of the
 *   4a2570b Merge branch 'master' of gist.github.com:f15b7e1e22f4fcf6ff1d
 |\
 | * ae86672 devtools options
+| * 512b39f getopt
+| * 4a245a5 git-ize this
+* | 6f94139 getopt dependency
+|/
+* 33724f7 rm auto gen content
 ```
 
 and push them back to the repository;
+
 
 ```bash
 ## From local machine
 git push origin master
 ```
 
+Organizing your gists
+---------------------
+
+Use [gistbox](http://www.gistboxapp.com) as a mechanism to share and organize your gists with collaborators.
+
 
 See also
 --------
 
-* https://help.github.com/articles/about-gists/
+* https://help.github.com/articles/about-gists
+* http://www.labnol.org/internet/github-gist-tutorial/28499
