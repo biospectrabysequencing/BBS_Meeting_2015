@@ -3,13 +3,14 @@ Github gists
 
 What is a gist?
 
-`Gists` are a way to docmument and share code snippets. You can think of a gist as a cut down github repository, 
-each gist can be public or private (https, and large shasum url) and contain one or many files of content. 
+[Gists](http://gist.github.com) are a way to docmument and share code snippets. They are accessible from the link a tthe top middle of any github page.
+You can think of a gist as a cut down github repository, each gist can be public or private (https, and large shasum url) and contain one or many files of content. 
 
 By specifying the filetype of a file as *.md, automatically sets the filetype as markdown for document rendering.
  
-You can only have a master branch, however you can fork from an upstream gist, clone your origin fork, make changes locally, 
+You can only have a master branch, however you can fork an upstream gist url that has been shared with you, clone your origin fork, make changes locally, 
 and push those changes back into your fork. Only the owner of an upstream gist repository can merge changes from a fork back into the upstream repository.
+
 
 Private gist example
 --------------------
