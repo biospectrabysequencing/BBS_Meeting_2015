@@ -6,9 +6,9 @@
         username = <github-username>
 
 [http]
-        proxy = http://[PROXY_ADDRESS]:[PROXY_PORT]
+        proxy = http://<PROXY_ADDRESS>:<PROXY_PORT>
 [https]
-        proxy = https://[PROXY_ADDRESS]:[PROXY_PORT]
+        proxy = https://<PROXY_ADDRESS>:<PROXY_PORT>
 
 [color]
         ui = true
@@ -34,8 +34,8 @@
 
 [core]
     excludesfile = ~/.gitexcludes
-	editor   = 'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin
-    whitespace   = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    autocrlf = true
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 
 [cvsimport]
     r = cvs
